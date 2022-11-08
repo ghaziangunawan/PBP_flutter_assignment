@@ -22,13 +22,12 @@ Stateless Widget is widgets that does not have state objects meaning that it doe
 14. TextStyle - adding styles for text
 15. Container - for wrapping elements to add margin
 16. FloatingActionButton - Adding button
-17. Icon - Adding icons for the FloatingActionButton
-18. Spacer - Adding space between the button
 
 **- What is the function of setState()? Explain what variables can be affected by the function.**<br>
+setState() is a methode that is used to change the state for a stateful widget. It will tell the flutter framework that the internal state of the app has changed. It will trigger a rebuild of the app so we can see the change immediately. In my created app, setState is implemented with variable '_counter' to increment and decrement it_ 
 
-  
 **- Explain the difference between const and final.**<br>
+
 
 **-  Explain how you implement the checklist above.**<br>
 
