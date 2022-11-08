@@ -1,16 +1,18 @@
-# counter_7
+# Assignment 7 
 
-A new Flutter project.
 
-## Getting Started
+## Counter_7
 
-This project is a starting point for a Flutter application.
+**- Explain what is meant by stateless widget and stateful widget and explain the difference between them.**<br>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**- Mention what widgets you use in this project and explain their functions.**<br>
+
+
+**- What is the function of setState()? Explain what variables can be affected by the function.**<br>
+  
+**- Explain the difference between const and final.**<br>
+
+**-  Explain how you implement the checklist above.**<br>
+
