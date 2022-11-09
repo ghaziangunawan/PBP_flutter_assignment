@@ -30,5 +30,60 @@ setState() is a methode that is used to change the state for a stateful widget. 
 They both behaved exactly the same where we can enter values in it and cannot be changed in the future. The difference between both is const is created on compile time, meanwhile final is on run-time. In addition, if we have collection assigned to const, that item in the collection is also immutable, meanwhile in final the collection item is mutable
 
 **-  Explain how you implement the checklist above.**<br>
+1. run flutter create counter_7 to generate the necessary file and template for the main.dart file.
 
+2. Add the decrementer function in the stateful widget
+``` dart
+  void _decrementCounter(){
+    setState((){
+      if(_counter > 0 ){
+        _counter--;
+      }
+    });
+  }
+```
+3. modify the body widget to display wether it is odd or even number using IF-ELIF
+
+```dart
+    children: <Widget>[ 
+            if((_counter % 2) == 0)...[
+              Text("Even",
+              style: TextStyle(color:Colors.red)),
+            ]else...[
+              Text("Odd",
+              style: TextStyle(color:Colors.blue))
+            ],
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ],
+        ),
+      ),
+```
+4. Modify the floatingActionButton widget so it has two buttons with the correct position and the associated function
+
+```dart
+      floatingActionButton:  Row(
+        children :[
+          if(_counter != 0)...[
+             Container(
+            margin: EdgeInsets.only(left:20),
+            child: 
+            FloatingActionButton(
+            onPressed: _decrementCounter,
+            tooltip: 'Decrement',
+            child: const Icon(Icons.remove),
+            ), 
+          ),
+          ],
+          Spacer(),
+          FloatingActionButton(
+            onPressed: _incrementCounter,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ), 
+        ]
+      )
+```
 
