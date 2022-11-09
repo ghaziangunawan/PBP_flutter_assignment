@@ -27,7 +27,8 @@ Stateless Widget is widgets that does not have state objects meaning that it doe
 setState() is a methode that is used to change the state for a stateful widget. It will tell the flutter framework that the internal state of the app has changed. It will trigger a rebuild of the app so we can see the change immediately. In my created app, setState is implemented with variable '_counter' to increment and decrement it_ 
 
 **- Explain the difference between const and final.**<br>
-
+They both behaved exactly the same where we can enter values in it and cannot be changed in the future. The difference between both is const is created on compile time, meanwhile final is on run-time. In addition, if we have collection assigned to const, that item in the collection is also immutable, meanwhile in final the collection item is mutable
 
 **-  Explain how you implement the checklist above.**<br>
+
 
