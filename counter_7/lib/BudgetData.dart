@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/AddBudgetInfo.dart';
 import 'package:counter_7/main.dart';
+import 'package:counter_7/drawer.dart';
 
 class MyDataPage extends StatefulWidget {
     const MyDataPage({super.key});
@@ -16,42 +17,8 @@ class _MyDataPageState extends State<MyDataPage> {
             appBar: AppBar(
                 title: Text('Data'),
             ),
-        drawer: Drawer(
-        child: Column(
-            children: [
-            // Adding clickable menu
-                ListTile(
-                    title: const Text('counter_7'),
-                    onTap: () {
-                        // Routing the menu to the main page
-                        Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => const MyHomePage(title: 'counter')),
-                        );
-                    },
-                ),
-                ListTile(
-                    title: const Text('Add Budget Info'),
-                    onTap: () {
-                    // Routing the menu to the form page
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(builder: (context) => const MyFormPage()),
-                        );
-                     },
-                ),
-                ListTile(
-                    title: const Text('Budget Data'),
-                    onTap: (){
-                        Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder:(context) => const MyDataPage()),
-                        );
-                    },
-                ),
-            ],
-        ),
-        ),
+        drawer: drawer(),
+       
         body: Container(
         child: Column(
           children: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/AddBudgetInfo.dart';
 import 'package:counter_7/BudgetData.dart';
+import 'package:counter_7/drawer.dart';
 
 
 void main() {
@@ -86,42 +87,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      drawer: Drawer(
-      child: Column(
-        children: [
-          // Adding clickable menu
-          ListTile(
-            title: const Text('counter_7'),
-            onTap: () {
-              // Routing the menu to the main page
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const MyHomePage(title: 'counter')),
-              );
-            },
-          ),
-          ListTile(
-            title: const Text('Add Budget Info'),
-            onTap: () {
-              // Routing the menu to the form page
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const MyFormPage()),
-              );
-            },
-          ),
-          ListTile(
-            title: const Text('Budget Data'),
-            onTap: (){
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder:(context) => const MyDataPage()),
-              );
-            },
-          ),
-        ],
-      ),
-    ),
+      drawer: drawer(),
+      
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
