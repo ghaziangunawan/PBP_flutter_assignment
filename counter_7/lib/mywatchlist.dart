@@ -85,7 +85,7 @@ class _mywatchliststate extends State<mywatchlist> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                         Text(
-                            "${snapshot.data![index].title}",
+                            "${snapshot.data![index].fields.title}",
                             style: const TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,

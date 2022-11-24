@@ -3,8 +3,8 @@ import 'package:counter_7/drawer.dart';
 import 'package:counter_7/model/watchlist.dart';
 import 'package:counter_7/mywatchlist.dart';
 
-class watchlistdetail extends StatefulWidget {
-  const watchlistdetail({ super.key, required this.watched, required this.title, required this.rating, required this.date, required this.review});
+class watchlistdetail extends StatelessWidget {
+  watchlistdetail({ super.key, required this.watched, required this.title, required this.rating, required this.date, required this.review});
   final Watched watched;
   final String title;
   final int rating;
@@ -18,9 +18,6 @@ class watchlistdetail extends StatefulWidget {
         drawer: drawer(),
          body: Column(
         children: [
-          Align(
-            alignment: Alignment.center, child: Text(watched ,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35)),
-          ),
           ListTile(
             leading: Text('Release Date :', style: TextStyle(fontWeight: FontWeight.bold)),
             title: Text(title),
@@ -28,7 +25,7 @@ class watchlistdetail extends StatefulWidget {
           ListTile(
             leading: Text('Rating :', style: TextStyle(fontWeight: FontWeight.bold)),
             trailing: Text(''),
-            title: Text(rating),
+            title: Text(rating.toString()),
           ),
           ListTile(
             leading: Text('Status :', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -38,7 +35,7 @@ class watchlistdetail extends StatefulWidget {
           ListTile(
             leading: Text('Review :', style: TextStyle(fontWeight: FontWeight.bold)),
             trailing: Text(''),
-            title: Text(reviews),
+            title: Text(review),
           ),
           Expanded(
             child: Align(
